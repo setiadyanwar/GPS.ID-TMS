@@ -1,9 +1,3 @@
-/**
- * Global session store menggunakan Zustand dengan persistence ke SessionStorage.
- * Diletakkan di shared/ karena dipakai lintas page (Login & Dashboard).
- *
- * Aturan: Hanya berisi state & setter. Tidak ada HTTP call di sini.
- */
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { AuthUser } from '@/pages/Login/service/authService';

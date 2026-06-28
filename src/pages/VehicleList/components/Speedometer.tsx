@@ -1,12 +1,3 @@
-/**
- * Speedometer.tsx
- *
- * Pure presentational component untuk menampilkan kecepatan dan odometer
- * dalam bentuk gauge/speedometer setengah lingkaran.
- *
- * Menggunakan React.useId() agar setiap instance memiliki SVG ID yang unik
- * — ini penting agar mask dan gradient tidak saling "mencuri" style antar card.
- */
 import { useId } from 'react';
 
 interface SpeedometerProps {

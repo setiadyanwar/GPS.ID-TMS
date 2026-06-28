@@ -1,9 +1,3 @@
-/**
- * EngineIcon.tsx
- *
- * Pure presentational SVG icon untuk status mesin / ACC.
- */
-
 interface EngineIconProps {
   className?: string;
   size?: number;

@@ -1,13 +1,3 @@
-/**
- * Skeleton.tsx
- *
- * Primitive reusable untuk loading placeholder.
- * Dipakai sebagai building block di komponen skeleton lain.
- *
- * Cara pakai:
- *   <Skeleton className="h-4 w-3/4 rounded-md" />
- */
-
 interface SkeletonProps {
   className?: string;
 }

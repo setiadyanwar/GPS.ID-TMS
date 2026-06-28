@@ -1,22 +1,3 @@
-/**
- * VehicleCard.tsx
- *
- * Pure presentational component — tidak mengandung logic apapun.
- *
- * Mendukung dua mode melalui prop `loading`:
- *   <VehicleCard loading />                     → Skeleton otomatis
- *   <VehicleCard vehicle={v} status={s} />      → Konten nyata
- *
- * Skeleton SELALU mengikuti layout card yang nyata karena dibuat di
- * dalam file yang sama — tidak ada komponen skeleton terpisah yang harus
- * diupdate secara manual setiap kali layout card berubah.
- *
- * Logic (format tanggal, SVG, dll.) ada di:
- *   - utils/dateUtils.ts              → formatToIDDate
- *   - components/Speedometer.tsx      → Speedometer gauge
- *   - shared/ui/Icons/EngineIcon.tsx  → EngineIcon
- *   - shared/ui/Skeleton/Skeleton.tsx → Skeleton primitive
- */
 import type { Vehicle, VehicleStatus } from '../types/vehicle';
 import { ClipboardList, BatteryFull } from 'lucide-react';
 

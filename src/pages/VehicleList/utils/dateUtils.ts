@@ -1,18 +1,3 @@
-/**
- * dateUtils.ts
- *
- * Kumpulan helper functions untuk formatting tanggal.
- * Letakkan di sini (utils/) agar bisa dipakai di seluruh fitur VehicleList.
- */
-
-/**
- * Format tanggal dari API (YYYY-MM-DD atau YYYY-MM-DD HH:mm:ss)
- * menjadi format Indonesia (DD-MM-YYYY atau DD-MM-YYYY HH:mm:ss).
- * Menggunakan native Date API — lebih robust dari regex string manipulation.
- *
- * @param dateString - String tanggal dari API
- * @param showTime - Tampilkan jam jika string mengandung waktu (default: true)
- */
 export const formatToIDDate = (dateString?: string, showTime = true): string => {
   if (!dateString) return '-';
   try {

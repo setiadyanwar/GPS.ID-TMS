@@ -1,19 +1,3 @@
-/**
- * TooltipProvider.tsx
- *
- * Sistem tooltip global ala Sonner/Toast — cukup dirender SEKALI di root App.
- *
- * Cara pakai di komponen mana saja (TANPA import apapun):
- *   <span data-tooltip="Teks tooltip di sini">...</span>
- *
- * Untuk teks yang hanya tampil ketika benar-benar ter-truncate:
- *   <span data-tooltip data-tooltip-truncate className="truncate">Teks panjang...</span>
- *   → Tooltip hanya muncul jika scrollWidth > clientWidth (benar-benar terpotong).
- *   → Konten tooltip diambil otomatis dari textContent elemen itu sendiri.
- *
- * Untuk konten custom + truncate check:
- *   <span data-tooltip="Custom teks" data-tooltip-truncate className="truncate">Teks...</span>
- */
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 

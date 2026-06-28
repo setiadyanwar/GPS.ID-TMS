@@ -1,13 +1,3 @@
-/**
- * Custom hook: useVehicleData
- *
- * Tanggung jawab tunggal:
- * - Memanggil vehicleApi.getVehicleList()
- * - Mengelola loading, error, dan data state
- *
- * Ikuti rules: hooks/ fokus murni pada pemanggilan API (useEffect).
- * Logika bisnis (kalkulasi status) ada di utils/, bukan di sini.
- */
 import { useState, useEffect, useCallback } from 'react';
 import { getVehicleList } from '../api/vehicleApi';
 import type { Vehicle } from '../types/vehicle';

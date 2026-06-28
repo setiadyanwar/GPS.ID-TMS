@@ -1,9 +1,3 @@
-/**
- * Global search store menggunakan Zustand.
- * Digunakan oleh HeaderSearch (writer) dan halaman yang butuh filter data (reader).
- *
- * Aturan: Hanya berisi state & setter. Tidak ada logika filter di sini.
- */
 import { create } from 'zustand';
 
 interface SearchState {

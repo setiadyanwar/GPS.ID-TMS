@@ -1,12 +1,3 @@
-/**
- * Service Layer — Logika non-network untuk auth.
- * Ikuti rules: service/ tahu cara "menggunakan data" dari api/.
- *
- * Tanggung jawab:
- * - Memanggil api/ yang murni
- * - Menyimpan/membaca token dari Zustand store (persistence via localStorage)
- * - Melempar error yang sudah ter-normalize agar mudah ditangani komponen
- */
 import { postLogin } from '../api/authApi';
 import type { LoginPayload } from '../api/authApi';
 import { useSessionStore } from '@/shared/store/sessionStore';
