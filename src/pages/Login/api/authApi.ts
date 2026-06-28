@@ -1,3 +1,4 @@
+// Konfigurasi request HTTP ke API GPS.ID
 import { apiClient } from '@/shared/api';
 
 export interface LoginPayload {

@@ -1,3 +1,4 @@
+// Halaman utama login, merender layout dan background
 
 import { Navigate } from 'react-router-dom';
 import { useSessionStore } from '@/shared/store/sessionStore';

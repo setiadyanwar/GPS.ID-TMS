@@ -1,3 +1,4 @@
+// Komponen UI untuk kotak form login
 import patternBg from '@/assets/illustrations/pattern.svg';
 import { LoginForm } from './LoginForm';
 
