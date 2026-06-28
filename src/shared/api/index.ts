@@ -1,0 +1,34 @@
+/**
+ * Axios instance global yang dishare ke seluruh page.
+ * Interceptor otomatis menyisipkan Bearer token dari sessionStore.
+ */
+import axios from 'axios';
+import { useSessionStore } from '../store/sessionStore';
+
+export const apiClient = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+apiClient.interceptors.request.use(
+  (config) => {
+    const token = useSessionStore.getState().token;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      useSessionStore.getState().clearSession();
+    }
+    return Promise.reject(error);
+  }
+);
