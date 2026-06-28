@@ -51,12 +51,5 @@ npm run dev
 
 3. Open your browser and navigate to `http://localhost:5173`
 
-## 👨‍💻 Best Practices Applied
-
-- **Separation of Concerns:** Business logic (Services), HTTP requests (API), and UI (Components) are strictly decoupled.
-- **Adapter Pattern:** Third-party libraries like `Sonner` are wrapped in local `shared/ui` components to prevent vendor lock-in.
-- **Nullish Coalescing (`??`) Over OR (`||`):** Strict handling of falsy values like `0` (e.g., Speed) to prevent accidental layout bugs.
-- **Performant Rendering:** Static configurations and mappings are hoisted outside of React components to prevent unnecessary re-evaluations during render cycles.
-
 ---
 *Developed as part of the GPS.ID Frontend Developer 💖 Technical Test.*
