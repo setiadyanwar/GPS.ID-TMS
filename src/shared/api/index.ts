@@ -1,7 +1,3 @@
-/**
- * Axios instance global yang dishare ke seluruh page.
- * Interceptor otomatis menyisipkan Bearer token dari sessionStore.
- */
 import axios from 'axios';
 import { useSessionStore } from '../store/sessionStore';
 

@@ -1,10 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { useSessionStore } from '../shared/store/sessionStore';
 
-/**
- * Guard untuk route yang membutuhkan autentikasi.
- * Jika user tidak memiliki token, redirect ke halaman /login.
- */
+// Untuk menjaga halaman-halaman yang bersifat rahasia/pribadi, jika tidak login maka akan diarahkan ke login
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const token = useSessionStore((state) => state.token);
   if (!token) return <Navigate to="/login" replace />;

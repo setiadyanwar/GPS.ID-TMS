@@ -1,7 +1,3 @@
-/**
- * Murni HTTP requests saja — tidak ada logika lain di sini.
- * Ikuti rules: api/ hanya tahu cara "meminta data".
- */
 import { apiClient } from '@/shared/api';
 
 export interface LoginPayload {

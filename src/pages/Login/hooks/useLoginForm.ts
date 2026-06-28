@@ -12,10 +12,7 @@ interface LoginFormState {
   passwordError: string | null;
 }
 
-/**
- * useLoginForm — Semua business logic untuk form Login.
- * Komponen LoginForm hanya boleh memanggil hook ini dan merender UI-nya.
- */
+
 export const useLoginForm = () => {
   const navigate = useNavigate();
 

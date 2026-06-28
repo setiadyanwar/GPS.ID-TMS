@@ -3,10 +3,7 @@ import { Input } from '@/shared/ui/Input';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { useLoginForm } from '../hooks/useLoginForm';
 
-/**
- * LoginForm — Presentational Component (UI Murni).
- * Tidak ada business logic di sini. Semua state & handler dari useLoginForm.
- */
+
 export const LoginForm = () => {
   const {
     username,

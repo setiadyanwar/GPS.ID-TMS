@@ -17,7 +17,7 @@ export const loginUser = async (payload: LoginPayload): Promise<void> => {
       throw new Error(
         typeof response.message === 'string'
           ? response.message
-          : 'Login gagal. Periksa username dan password kamu.'
+          : 'Login Failed. Please check your username and password.'
       );
     }
 
@@ -29,7 +29,7 @@ export const loginUser = async (payload: LoginPayload): Promise<void> => {
     if (err && typeof err === 'object' && 'response' in err) {
       const axiosErr = err as { response?: { data?: { message?: string } } };
       const serverMsg = axiosErr.response?.data?.message;
-      throw new Error(serverMsg ?? 'Username atau password salah. Silakan coba lagi.');
+      throw new Error(serverMsg ?? 'Username or password wrong. Please try again.');
     }
     // Jika bukan Axios error (misal: network down), teruskan error aslinya
     throw err;

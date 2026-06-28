@@ -1,10 +1,7 @@
 import patternBg from '@/assets/illustrations/pattern.svg';
 import { LoginForm } from './LoginForm';
 
-/**
- * LoginCard — Presentational wrapper: background + white card shell.
- * Dipecah dari index.tsx agar entry point tidak punya raw JSX panjang.
- */
+
 const LoginCard = () => (
   <main className="flex min-h-screen w-full font-sans bg-primary items-center justify-center p-4 relative overflow-hidden">
     {/* Background Pattern */}

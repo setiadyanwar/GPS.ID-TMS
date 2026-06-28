@@ -1,9 +1,3 @@
-/**
- * TypeScript interfaces untuk domain Vehicle.
- * Dipisahkan ke types/ agar mudah di-import oleh api/, hooks/, dan components/
- * tanpa circular dependency.
- */
-
 export interface Vehicle {
   imei: string;
   owner: string;

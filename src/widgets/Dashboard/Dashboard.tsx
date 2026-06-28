@@ -1,4 +1,3 @@
-
 import { Sidebar } from '@/widgets/Sidebar/Sidebar';
 import { Header } from '@/widgets/Header/Header';
 import { useSidebar } from './hooks/useSidebar';
@@ -7,10 +6,7 @@ interface DashboardProps {
   children: React.ReactNode;
 }
 
-/**
- * Dashboard — Global wrapper untuk halaman-halaman dashboard.
- * Hanya bertanggung jawab atas komposisi layout makro.
- */
+
 export const Dashboard = ({ children }: DashboardProps) => {
   const { isCollapsed, toggle } = useSidebar();
 
