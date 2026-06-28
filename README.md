@@ -59,4 +59,4 @@ npm run dev
 - **Performant Rendering:** Static configurations and mappings are hoisted outside of React components to prevent unnecessary re-evaluations during render cycles.
 
 ---
-*Developed as part of the GPS.ID Frontend Developer Technical Test.*
+*Developed as part of the GPS.ID Frontend Developer 💖 Technical Test.*
