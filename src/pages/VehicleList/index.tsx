@@ -1,5 +1,5 @@
 import { useVehicleData } from './hooks/useVehicleData';
-import { VehicleGrid } from './components/VehicleGrid';
+import { VehicleContent } from './components/VehicleContent';
 import { VehicleListHeader } from './components/VehicleListHeader';
 import { Dashboard } from '@/widgets/Dashboard/Dashboard';
 
@@ -13,7 +13,7 @@ const VehicleList = () => {
         isLoading={isLoading} 
         onRefresh={refetch} 
       />
-      <VehicleGrid 
+      <VehicleContent 
         vehicles={vehicles} 
         isLoading={isLoading} 
         error={error} 

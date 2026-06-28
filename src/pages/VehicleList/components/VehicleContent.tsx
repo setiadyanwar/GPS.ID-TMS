@@ -3,13 +3,13 @@ import { getVehicleStatus } from '../utils/vehicleUtils';
 import { VehicleCard } from './VehicleCard';
 import { useVehicleGrid } from '../hooks/useVehicleGrid';
 
-interface VehicleGridProps {
+interface VehicleContentProps {
   vehicles: Vehicle[];
   isLoading: boolean;
   error: string | null;
 }
 
-export const VehicleGrid = ({ vehicles, isLoading, error }: VehicleGridProps) => {
+export const VehicleContent = ({ vehicles, isLoading, error }: VehicleContentProps) => {
   const {
     query,
     filteredVehicles,
@@ -33,17 +33,17 @@ export const VehicleGrid = ({ vehicles, isLoading, error }: VehicleGridProps) =>
   if (error) {
     return (
       <div className="flex flex-col items-center justify-center py-16 px-5 gap-4">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="#ef4444">
+        <svg width="48" height="48" viewBox="0 0 24 24" className="fill-danger">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
         </svg>
-        <p className="text-red-500 font-medium text-[15px] text-center">{error}</p>
+        <p className="text-danger font-medium text-base text-center">{error}</p>
       </div>
     );
   }
 
   if (filteredVehicles.length === 0 && !isLoading) {
     return (
-      <div className="text-center py-16 px-5 text-slate-400 font-medium text-[15px]">
+      <div className="text-center py-16 px-5 text-typography-placeholder font-medium text-[15px]">
         <p>{query ? `No vehicles found for "${query}".` : 'No vehicles found.'}</p>
       </div>
     );

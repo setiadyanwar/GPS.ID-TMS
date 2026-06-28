@@ -37,7 +37,7 @@ type VehicleCardProps =
 const VehicleCardSkeleton = () => (
   <div className="w-full">
     {/* Tab */}
-    <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-t-xl border-b border-[#F5F6FA]">
+    <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-t-xl border-b border-body">
       <Skeleton className="h-3.5 w-16 rounded-md" />
       <Skeleton className="h-3.5 w-20 rounded-md" />
     </div>
@@ -70,7 +70,7 @@ const VehicleCardSkeleton = () => (
       </div>
 
       {/* Bottom: Footer info */}
-      <div className="bg-slate-50 rounded-lg py-1 px-3 flex justify-between items-center gap-4">
+      <div className="bg-body rounded-lg py-1 px-3 flex justify-between items-center gap-4">
         <Skeleton className="h-3 w-32 rounded-md" />
         <Skeleton className="h-3 w-24 rounded-md" />
         <Skeleton className="h-3 w-28 rounded-md" />
@@ -86,7 +86,7 @@ export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
   return (
     <div className="w-full">
       {/* Folder Tab */}
-      <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-t-xl border-b border-[#F5F6FA]">
+      <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-t-xl border-b border-body">
         <span className="text-typography-muted text-sm font-medium">Status :</span>
         <div className="flex items-center gap-1.5 font-bold text-typography-heading text-sm">
           <ClipboardList size={16} className="text-typography-heading" />
@@ -149,7 +149,7 @@ export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
         </div>
 
         {/* Bottom Section: Footer Info */}
-        <div className="bg-[#F5F6FA] py-1 px-3 flex justify-between items-center">
+        <div className="bg-body py-1 px-3 flex justify-between items-center">
           <span className="text-xs font-semibold text-typography-muted">
             Last Update : {formatToIDDate(vehicle.last_update)}
           </span>
