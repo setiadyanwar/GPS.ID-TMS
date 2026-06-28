@@ -44,7 +44,14 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 npm install
 ```
 
-2. Start the development server:
+2. Set up environment variables:
+Copy the example environment file and configure your API Base URL.
+```bash
+cp .env.example .env
+```
+*(Open `.env` and ensure `VITE_API_BASE_URL` is correctly set).*
+
+3. Start the development server:
 ```bash
 npm run dev
 ```

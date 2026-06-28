@@ -30,3 +30,4 @@ Soal Frontend Developer.pdf
 # Environment Variables
 .env
 .env.*
+!.env.example
