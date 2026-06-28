@@ -5,7 +5,7 @@ import { VehicleContent } from './components/VehicleContent';
 import { Dashboard } from '@/widgets/Dashboard/Dashboard';
 
 const VehicleList = () => {
-  const { vehicles, isLoading, error, refetch } = useVehicleData();
+  const { vehicles, isLoading, error } = useVehicleData();
 
   return (
     <Dashboard>

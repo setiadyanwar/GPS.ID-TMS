@@ -1,5 +1,5 @@
 // Konfigurasi routing utama dan route guard untuk autentikasi
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from '@/shared/ui/Toast/Toast';
 import ProtectedRoute from './ProtectedRoute';

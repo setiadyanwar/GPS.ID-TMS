@@ -1,5 +1,5 @@
 import type { Vehicle, VehicleStatus } from '../types/vehicle';
-import { ClipboardList, BatteryFull } from 'lucide-react';
+import { BatteryFull } from 'lucide-react';
 
 import TruckBox from '@/assets/images/truck-box.png';
 import SatelitIcon from '@/assets/icons/satelit.svg';
