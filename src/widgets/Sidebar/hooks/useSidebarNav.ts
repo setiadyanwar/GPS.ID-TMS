@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { logoutUser } from '@/pages/Login/service/authService';
 import { HiSquares2X2, HiCube, HiSquare3Stack3D } from 'react-icons/hi2';
+import { toast } from 'sonner';
 
 export const NAV_ITEMS = [
   { icon: HiSquares2X2, label: 'Dashboard', path: '/dashboard-home' },
@@ -14,6 +15,7 @@ export const useSidebarNav = () => {
 
   const handleLogout = () => {
     logoutUser();
+    toast.success('Logout Successful!');
     navigate('/login', { replace: true });
   };
 

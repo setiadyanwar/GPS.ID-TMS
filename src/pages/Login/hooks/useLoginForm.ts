@@ -1,6 +1,7 @@
 // Hook untuk handle state input dan error form
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 import { loginUser } from '../service/authService';
 
 interface LoginFormState {
@@ -75,6 +76,7 @@ export const useLoginForm = () => {
       localStorage.setItem('gps-remember', state.remember ? 'true' : 'false');
       
       await loginUser({ username: state.username, password: state.password });
+      toast.success('Login Successful!');
       navigate('/vehicle-list');
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Terjadi kesalahan yang tidak diketahui.';
