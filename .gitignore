@@ -26,3 +26,7 @@ Soal Frontend Developer.pdf
 *.njsproj
 *.sln
 *.sw?
+
+# Environment Variables
+.env
+.env.*
