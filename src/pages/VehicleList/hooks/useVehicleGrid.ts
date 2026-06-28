@@ -1,3 +1,4 @@
+// Logic untuk query pagination dan search
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useSearchStore } from '@/shared/store/searchStore';
 import type { Vehicle } from '../types/vehicle';

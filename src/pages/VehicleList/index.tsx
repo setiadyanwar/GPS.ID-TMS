@@ -1,3 +1,4 @@
+// Halaman utama VehicleList(Entry Point)
 import { useVehicleData } from './hooks/useVehicleData';
 import { VehicleContent } from './components/VehicleContent';
 import { VehicleListHeader } from './components/VehicleListHeader';

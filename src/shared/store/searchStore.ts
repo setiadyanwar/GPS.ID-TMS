@@ -1,3 +1,4 @@
+// Store untuk mengelola state search
 import { create } from 'zustand';
 
 interface SearchState {

@@ -1,4 +1,4 @@
-
+// Konfigurasi routing utama dan route guard untuk autentikasi
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';

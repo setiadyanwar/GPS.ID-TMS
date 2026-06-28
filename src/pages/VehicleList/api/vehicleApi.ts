@@ -1,6 +1,6 @@
+// Konfigurasi request HTTP ke API GPS.ID
 import { apiClient } from '@/shared/api';
 import type { Vehicle } from '../types/vehicle';
-
 export interface VehicleListApiResponse {
   status: boolean;
   message: { total: number; data: Vehicle[] } | string;

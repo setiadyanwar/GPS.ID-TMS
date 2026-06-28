@@ -1,3 +1,4 @@
+// Store untuk mengelola state session
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { AuthUser } from '@/pages/Login/service/authService';

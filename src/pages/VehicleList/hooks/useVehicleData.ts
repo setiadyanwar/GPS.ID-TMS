@@ -1,3 +1,4 @@
+// Logic fetching data
 import { useState, useEffect, useCallback } from 'react';
 import { getVehicleList } from '../api/vehicleApi';
 import type { Vehicle } from '../types/vehicle';

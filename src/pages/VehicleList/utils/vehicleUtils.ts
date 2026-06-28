@@ -1,5 +1,5 @@
+// Utils untuk kalkulasi logic murni
 import type { VehicleStatus } from '../types/vehicle';
-
 
 export const getVehicleStatus = (acc: string, speed: number): VehicleStatus => {
   if (acc === 'ON' && speed > 0) return 'Running';

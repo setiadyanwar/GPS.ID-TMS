@@ -1,3 +1,4 @@
+// Type untuk data vehicle
 export interface Vehicle {
   imei: string;
   owner: string;

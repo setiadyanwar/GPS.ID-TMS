@@ -1,5 +1,4 @@
-// Halaman utama login, merender layout dan background
-
+// Halaman utama login(Entry Point), merender layout dan background
 import { Navigate } from 'react-router-dom';
 import { useSessionStore } from '@/shared/store/sessionStore';
 import LoginCard from './components/LoginCard';
