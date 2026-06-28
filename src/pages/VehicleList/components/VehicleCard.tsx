@@ -33,6 +33,13 @@ type VehicleCardProps =
   | { loading: true; vehicle?: never; status?: never }
   | { loading?: false; vehicle: Vehicle; status: VehicleStatus };
 
+const STATUS_CONFIG: Record<VehicleStatus, { label: string; colorClass: string }> = {
+  Running: { label: 'Running', colorClass: 'bg-success' },
+  Stop: { label: 'Stop', colorClass: 'bg-danger' },
+  Parking: { label: 'Parking', colorClass: 'bg-slate-400' },
+  Unknown: { label: 'Unknown', colorClass: 'bg-slate-300' },
+};
+
 // ─── Skeleton version (mirrors real layout) ────────────────────────────────
 const VehicleCardSkeleton = () => (
   <div className="w-full">
@@ -83,20 +90,7 @@ const VehicleCardSkeleton = () => (
 export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
   if (loading) return <VehicleCardSkeleton />;
 
-  const getStatusConfig = (s: VehicleStatus) => {
-    switch (s) {
-      case 'Running':
-        return { label: 'Running', colorClass: 'bg-success' };
-      case 'Stop':
-        return { label: 'Stop', colorClass: 'bg-danger' };
-      case 'Parking':
-        return { label: 'Parking', colorClass: 'bg-slate-400' };
-      default:
-        return { label: 'Unknown', colorClass: 'bg-slate-300' };
-    }
-  };
-
-  const statusConfig = getStatusConfig(status);
+  const statusConfig = STATUS_CONFIG[status] || STATUS_CONFIG.Unknown;
 
   return (
     <div className="w-full">
