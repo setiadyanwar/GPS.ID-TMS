@@ -83,14 +83,29 @@ const VehicleCardSkeleton = () => (
 export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
   if (loading) return <VehicleCardSkeleton />;
 
+  const getStatusConfig = (s: VehicleStatus) => {
+    switch (s) {
+      case 'Running':
+        return { label: 'Running', colorClass: 'bg-success' };
+      case 'Stop':
+        return { label: 'Stop', colorClass: 'bg-danger' };
+      case 'Parking':
+        return { label: 'Parking', colorClass: 'bg-slate-400' };
+      default:
+        return { label: 'Unknown', colorClass: 'bg-slate-300' };
+    }
+  };
+
+  const statusConfig = getStatusConfig(status);
+
   return (
     <div className="w-full">
       {/* Folder Tab */}
       <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-t-xl border-b border-body">
         <span className="text-typography-muted text-sm font-medium">Status :</span>
         <div className="flex items-center gap-1.5 font-bold text-typography-heading text-sm">
-          <ClipboardList size={16} className="text-typography-heading" />
-          Dispatch
+          <span className={`w-2.5 h-2.5 rounded-full ${statusConfig.colorClass}`} />
+          {statusConfig.label}
         </div>
       </div>
 
@@ -151,7 +166,7 @@ export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
         {/* Bottom Section: Footer Info */}
         <div className="bg-body py-1 px-3 flex justify-between items-center">
           <span className="text-xs font-semibold text-typography-muted">
-            Last Update : {formatToIDDate(vehicle.last_update)}
+            Activated : {formatToIDDate(vehicle.activation_time)}
           </span>
           <span className="text-xs font-semibold text-typography-muted">
             GSM No : {vehicle.gsm_no}
