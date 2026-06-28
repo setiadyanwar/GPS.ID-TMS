@@ -8,10 +8,6 @@ export const Toaster = () => {
   return <SonnerToaster position="top-center" richColors />;
 };
 
-/**
- * Objek toast yang diexport untuk digunakan di seluruh aplikasi.
- * Mencegah vendor lock-in jika suatu saat ganti library dari Sonner.
- */
 export const toast = {
   success: (message: string) => sonnerToast.success(message),
   error: (message: string) => sonnerToast.error(message),

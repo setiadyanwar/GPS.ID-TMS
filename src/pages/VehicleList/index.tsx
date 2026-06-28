@@ -1,7 +1,7 @@
 // Halaman utama VehicleList(Entry Point)
 import { useVehicleData } from './hooks/useVehicleData';
 import { VehicleContent } from './components/VehicleContent';
-import { VehicleListHeader } from './components/VehicleListHeader';
+// import { VehicleListHeader } from './components/VehicleListHeader';
 import { Dashboard } from '@/widgets/Dashboard/Dashboard';
 
 const VehicleList = () => {
@@ -9,11 +9,12 @@ const VehicleList = () => {
 
   return (
     <Dashboard>
+      {/* dimatikan dulu
       <VehicleListHeader 
         totalVehicles={vehicles.length} 
         isLoading={isLoading} 
         onRefresh={refetch} 
-      />
+      /> */}
       <VehicleContent 
         vehicles={vehicles} 
         isLoading={isLoading} 
