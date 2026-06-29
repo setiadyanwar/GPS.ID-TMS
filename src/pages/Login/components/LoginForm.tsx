@@ -1,8 +1,10 @@
 // Komponen form input dan tombol submit
-import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Checkbox } from '@/shared/ui/Checkbox';
+import { Alert } from '@/shared/ui/Alert';
 import { useLoginForm } from '../hooks/useLoginForm';
+import { LoginHeader } from './LoginHeader';
+import { LoginActions } from './LoginActions';
 
 
 export const LoginForm = () => {
@@ -22,23 +24,11 @@ export const LoginForm = () => {
 
   return (
     <form className="flex flex-col gap-6" onSubmit={handleSubmit} noValidate>
-      <div className="text-center mb-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2 leading-tight">
-          Login to <span className="text-primary">GPS.ID TMS</span> Account
-        </h2>
-        <p className="text-lg sm:text-base text-slate-500 font-semibold sm:whitespace-nowrap">
-          Please enter your email and password to continue
-        </p>
-      </div>
+      <LoginHeader />
 
       {/* Global Error Alert (dari Server) */}
       {error && (
-        <div
-          className="flex items-start gap-3 bg-red-50/80 text-red-600 border border-red-100 rounded-lg px-4 py-3 text-sm font-semibold"
-          role="alert"
-        >
-          <span className="leading-snug">{error}</span>
-        </div>
+        <Alert message={error} type="error" />
       )}
 
       <Input
@@ -78,18 +68,7 @@ export const LoginForm = () => {
         onChange={(e) => setRemember(e.target.checked)}
       />
 
-      <div className="flex flex-col mt-3">
-        <Button id="login-submit-btn" type="submit" size="lg" fullWidth isLoading={isLoading}>
-          {isLoading ? 'Processing...' : 'Sign In'}
-        </Button>
-
-        <p className="text-sm text-slate-500 font-bold mt-5 text-center">
-          Don't have an account?{' '}
-          <a href="#" className="text-primary underline hover:text-primary-600 font-bold transition-colors">
-            Create Account
-          </a>
-        </p>
-      </div>
+      <LoginActions isLoading={isLoading} />
     </form>
   );
 };
