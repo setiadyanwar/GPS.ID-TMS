@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface AlertProps {
   message: string;
   type?: 'error' | 'success' | 'warning' | 'info';
