@@ -96,7 +96,7 @@ export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
           <div className="flex flex-col justify-center ml-2 min-w-0 overflow-hidden flex-1">
             <div className="flex items-center gap-2 mb-1 whitespace-nowrap">
               <span className="text-xs text-typography-placeholder font-medium">Shipment Number</span>
-              <span className="text-sm font-medium text-typography-heading">{vehicle.nomesin ?? '-'}</span>
+              <span className="text-sm font-semibold text-typography-heading">{vehicle.imei ?? '-'}</span>
             </div>
             <span
               data-tooltip={`${vehicle.plate} - ${vehicle.device_name}`}
@@ -121,11 +121,9 @@ export const VehicleCard = ({ loading, vehicle, status }: VehicleCardProps) => {
             <div className="absolute top-0 left-1/2 -translate-x-[27px] flex items-center justify-start gap-2 w-max max-w-[130px] sm:max-w-[180px]">
               <img src={SatelitIcon} alt="Satellite" className="w-5 h-5 shrink-0" />
               <span
-                data-tooltip={vehicle.address}
-                data-tooltip-truncate
                 className="text-sm font-extrabold text-typography-heading truncate block w-full text-left"
               >
-                {vehicle.address ?? 'N/A'}
+                {vehicle.satellite != null ? vehicle.satellite : 'N/A'}
               </span>
             </div>
           </div>
