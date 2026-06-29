@@ -1,6 +1,6 @@
 // Komponen UI untuk kotak form login
 import patternBg from '@/assets/illustrations/pattern.svg';
-import { LoginForm } from './LoginForm';
+import { LoginContent } from './LoginContent';
 
 
 const LoginCard = () => (
@@ -14,7 +14,7 @@ const LoginCard = () => (
 
     <div className="w-full max-w-2xl relative z-10 px-4 sm:px-0">
       <div className="bg-white py-8 px-6 sm:p-12 rounded-2xl shadow-2xl mx-auto max-w-[560px]">
-        <LoginForm />
+        <LoginContent />
       </div>
     </div>
   </main>

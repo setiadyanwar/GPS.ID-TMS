@@ -5,7 +5,7 @@ import type { Vehicle } from '../types/vehicle';
 
 const PAGE_SIZE = 6;
 
-export const useVehicleGrid = (vehicles: Vehicle[], isLoading: boolean) => {
+export const useVehicleContent = (vehicles: Vehicle[], isLoading: boolean) => {
   const query = useSearchStore((state) => state.query);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [isLoadingMore, setIsLoadingMore] = useState(false);

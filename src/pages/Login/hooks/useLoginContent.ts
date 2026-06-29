@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from '@/shared/ui/Toast/Toast';
 import { loginUser } from '../service/authService';
 
-interface LoginFormState {
+interface LoginContentState {
   username: string;
   password: string;
   remember: boolean;
@@ -15,10 +15,10 @@ interface LoginFormState {
 }
 
 
-export const useLoginForm = () => {
+export const useLoginContent = () => {
   const navigate = useNavigate();
 
-  const [state, setState] = useState<LoginFormState>({
+  const [state, setState] = useState<LoginContentState>({
     username: '',
     password: '',
     remember: false,
@@ -28,7 +28,7 @@ export const useLoginForm = () => {
     passwordError: null,
   });
 
-  const setField = <K extends keyof LoginFormState>(key: K, value: LoginFormState[K]) => {
+  const setField = <K extends keyof LoginContentState>(key: K, value: LoginContentState[K]) => {
     setState((prev) => ({ ...prev, [key]: value }));
   };
 

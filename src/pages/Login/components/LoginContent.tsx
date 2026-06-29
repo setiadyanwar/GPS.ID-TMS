@@ -2,12 +2,12 @@
 import { Input } from '@/shared/ui/Input';
 import { Checkbox } from '@/shared/ui/Checkbox';
 import { Alert } from '@/shared/ui/Alert';
-import { useLoginForm } from '../hooks/useLoginForm';
+import { useLoginContent } from '../hooks/useLoginContent';
 import { LoginHeader } from './LoginHeader';
 import { LoginActions } from './LoginActions';
 
 
-export const LoginForm = () => {
+export const LoginContent = () => {
   const {
     username,
     password,
@@ -20,7 +20,7 @@ export const LoginForm = () => {
     setPassword,
     setRemember,
     handleSubmit,
-  } = useLoginForm();
+  } = useLoginContent();
 
   return (
     <form className="flex flex-col gap-6" onSubmit={handleSubmit} noValidate>

@@ -1,7 +1,7 @@
 import type { Vehicle } from '../types/vehicle';
 import { getVehicleStatus } from '../utils/vehicleUtils';
 import { VehicleCard } from './VehicleCard';
-import { useVehicleGrid } from '../hooks/useVehicleGrid';
+import { useVehicleContent } from '../hooks/useVehicleContent';
 
 interface VehicleContentProps {
   vehicles: Vehicle[];
@@ -18,7 +18,7 @@ export const VehicleContent = ({ vehicles, isLoading, error }: VehicleContentPro
     hasMore,
     sentinelRef,
     PAGE_SIZE,
-  } = useVehicleGrid(vehicles, isLoading);
+  } = useVehicleContent(vehicles, isLoading);
 
   if (isLoading) {
     return (
