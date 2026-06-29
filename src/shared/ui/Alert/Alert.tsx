@@ -6,7 +6,7 @@ export interface AlertProps {
 
 export const Alert = ({ message, type = 'error', className = '' }: AlertProps) => {
   const baseClasses = "flex items-start gap-3 rounded-lg px-4 py-3 text-sm font-semibold border";
-  
+
   const typeClasses = {
     error: "bg-danger-50/80 text-danger-600 border-danger-100",
     success: "bg-success-50/80 text-success-600 border-success-100",
